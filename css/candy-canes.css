@@ -1,0 +1,139 @@
+/* ==================== Candy Canes Decoration ==================== */
+.candy-cane {
+    position: fixed;
+    width: 50px;
+    height: 150px;
+    z-index: 15;
+    pointer-events: none;
+}
+
+/* Main candy cane body using SVG-like approach */
+.candy-cane::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 90px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background:
+        linear-gradient(90deg,
+            #dc143c 0%, #dc143c 25%,
+            #ffffff 25%, #ffffff 50%,
+            #dc143c 50%, #dc143c 75%,
+            #ffffff 75%, #ffffff 100%);
+    background-size: 16px 100%;
+    border-radius: 10px;
+    box-shadow:
+        inset -2px 0 4px rgba(0, 0, 0, 0.3),
+        2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Hook/curve at top - semicircle */
+.candy-cane::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50px;
+    left: 5px;
+    border: 10px solid;
+    border-color: transparent;
+    border-top-color: #dc143c;
+    border-left-color: #dc143c;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    box-shadow:
+        -2px -2px 6px rgba(0, 0, 0, 0.4);
+    background:
+        repeating-conic-gradient(from 225deg at 50% 50%,
+            #dc143c 0deg 45deg,
+            #ffffff 45deg 90deg);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+/* Position candy canes - Top Left */
+.candy-cane-1 {
+    top: 60px;
+    left: 40px;
+    animation: candyFloat1 3.5s ease-in-out infinite;
+}
+
+/* Position candy canes - Top Right */
+.candy-cane-2 {
+    top: 80px;
+    right: 50px;
+    transform: scaleX(-1);
+    animation: candyFloat2 4s ease-in-out infinite;
+}
+
+/* Position candy canes - Bottom Left */
+.candy-cane-3 {
+    bottom: 260px;
+    left: 30px;
+    animation: candyFloat3 3.8s ease-in-out infinite;
+}
+
+/* Position candy canes - Bottom Right */
+.candy-cane-4 {
+    bottom: 280px;
+    right: 40px;
+    transform: scaleX(-1);
+    animation: candyFloat4 4.2s ease-in-out infinite;
+}
+
+/* Floating animations */
+@keyframes candyFloat1 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-8deg);
+    }
+}
+
+@keyframes candyFloat2 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg) scaleX(-1);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-8deg) scaleX(-1);
+    }
+}
+
+@keyframes candyFloat3 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-12deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+}
+
+@keyframes candyFloat4 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-12deg) scaleX(-1);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-10deg) scaleX(-1);
+    }
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .candy-cane {
+        display: none;
+    }
+}

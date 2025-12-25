@@ -1,0 +1,32 @@
+/* Main CSS file - imports all modular CSS files */
+
+/* 1. Base styles (variables, reset, body) */
+@import url('base.css');
+
+/* 2. Particle effects (snow, magic, confetti) */
+@import url('particles.css');
+
+/* 3. Christmas lights */
+@import url('lights.css');
+
+/* 4. Central gift box */
+@import url('gift-box.css');
+
+/* 5. Card/Letter */
+@import url('card.css');
+@import url('card-decorations.css');
+
+/* 6. Wreaths */
+@import url('wreaths.css');
+
+/* 7. Corner gifts */
+@import url('corner-gifts.css');
+
+/* 8. Candy canes */
+@import url('candy-canes.css');
+
+/* 9. Christmas stockings */
+@import url('stockings.css');
+
+/* 10. Responsive styles */
+@import url('responsive.css');

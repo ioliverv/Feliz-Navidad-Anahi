@@ -1,0 +1,695 @@
+/* ==================== Corner Gifts ==================== */
+.corner-gifts {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 250px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.corner-gift {
+    position: absolute;
+    animation: giftFloat 3s ease-in-out infinite;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Gift Message Styling */
+.gift-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #8a1c1c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4af37;
+    z-index: 9999;
+}
+
+.corner-gift:hover .gift-message {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.corner-gift:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+    z-index: 9998;
+}
+
+/* Blue Gift - Small, Top Left */
+.corner-gift:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 80px;
+    animation-delay: 0s;
+}
+
+/* Green Gift - Medium, Bottom Center-Right */
+.corner-gift:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    left: 145px;
+    bottom: 35px;
+    animation-delay: 0.5s;
+}
+
+/* Red Gift - Large, Bottom Left */
+.corner-gift:nth-child(3) {
+    width: 110px;
+    height: 110px;
+    left: 30px;
+    bottom: 30px;
+    animation-delay: 1s;
+}
+
+@keyframes giftFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.corner-gift-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.corner-gift-lid {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -15px;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.corner-gift-ribbon-v {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.9));
+    z-index: 2;
+}
+
+.corner-gift-ribbon-h {
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.9));
+    z-index: 2;
+}
+
+/* Blue Gift */
+.corner-gift.blue .corner-gift-box {
+    background: linear-gradient(135deg, #2196F3, #1565C0);
+}
+
+.corner-gift.blue .corner-gift-lid {
+    background: linear-gradient(135deg, #42A5F5, #1976D2);
+}
+
+/* Green Gift */
+.corner-gift.green .corner-gift-box {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.corner-gift.green .corner-gift-lid {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+}
+
+/* Red Gift */
+.corner-gift.red .corner-gift-box {
+    background: linear-gradient(135deg, #F44336, #C62828);
+}
+
+.corner-gift.red .corner-gift-lid {
+    background: linear-gradient(135deg, #EF5350, #D32F2F);
+}
+
+/* Purple Gift */
+.corner-gift.purple .corner-gift-box {
+    background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.corner-gift.purple .corner-gift-lid {
+    background: linear-gradient(135deg, #AB47BC, #7B1FA2);
+}
+
+/* Gold Gift */
+.corner-gift.gold .corner-gift-box {
+    background: linear-gradient(135deg, #FFC107, #F57C00);
+}
+
+.corner-gift.gold .corner-gift-lid {
+    background: linear-gradient(135deg, #FFD54F, #FF9800);
+}
+
+/* Purple Gift - Medium, Top Right of Red */
+.corner-gift:nth-child(4) {
+    width: 65px;
+    height: 65px;
+    left: 145px;
+    top: 90px;
+    animation-delay: 0.3s;
+}
+
+/* Gold Gift - Small, Right of Red */
+.corner-gift:nth-child(5) {
+    width: 55px;
+    height: 55px;
+    left: 90px;
+    bottom: 120px;
+    animation-delay: 0.7s;
+}
+
+/* Hide corner gifts on mobile */
+@media (max-width: 768px) {
+    .corner-gifts {
+        display: none;
+    }
+}
+
+/* ==================== Corner Gifts Right ==================== */
+.corner-gifts-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 250px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.corner-gift-r {
+    position: absolute;
+    animation: giftFloat 3s ease-in-out infinite;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Right Gift Message Styling */
+.gift-message-r {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #8a1c1c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4af37;
+    z-index: 9999;
+}
+
+.corner-gift-r:hover .gift-message-r {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.corner-gift-r:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+    z-index: 9998;
+}
+
+/* Orange Gift - Large, Bottom Right */
+.corner-gift-r:nth-child(1) {
+    width: 105px;
+    height: 105px;
+    right: 30px;
+    bottom: 30px;
+    animation-delay: 0s;
+}
+
+/* Pink Gift - Medium, Top Right */
+.corner-gift-r:nth-child(2) {
+    width: 68px;
+    height: 68px;
+    right: 30px;
+    top: 85px;
+    animation-delay: 0.4s;
+}
+
+/* Teal Gift - Medium, Bottom Left */
+.corner-gift-r:nth-child(3) {
+    width: 72px;
+    height: 72px;
+    right: 140px;
+    bottom: 35px;
+    animation-delay: 0.6s;
+}
+
+/* Yellow Gift - Small, Center */
+.corner-gift-r:nth-child(4) {
+    width: 58px;
+    height: 58px;
+    right: 88px;
+    bottom: 115px;
+    animation-delay: 0.2s;
+}
+
+/* Silver Gift - Medium, Top Left */
+.corner-gift-r:nth-child(5) {
+    width: 63px;
+    height: 63px;
+    right: 145px;
+    top: 92px;
+    animation-delay: 0.8s;
+}
+
+/* Lime Gift - Small, Middle */
+.corner-gift-r:nth-child(6) {
+    width: 52px;
+    height: 52px;
+    right: 75px;
+    top: 145px;
+    animation-delay: 0.5s;
+}
+
+.corner-gift-box-r {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.corner-gift-lid-r {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -15px;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.corner-gift-ribbon-v-r {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.9));
+    z-index: 2;
+}
+
+.corner-gift-ribbon-h-r {
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.9));
+    z-index: 2;
+}
+
+/* Orange Gift */
+.corner-gift-r.orange .corner-gift-box-r {
+    background: linear-gradient(135deg, #FF6F00, #E65100);
+}
+
+.corner-gift-r.orange .corner-gift-lid-r {
+    background: linear-gradient(135deg, #FF8F00, #F57C00);
+}
+
+/* Pink Gift */
+.corner-gift-r.pink .corner-gift-box-r {
+    background: linear-gradient(135deg, #E91E63, #C2185B);
+}
+
+.corner-gift-r.pink .corner-gift-lid-r {
+    background: linear-gradient(135deg, #F06292, #D81B60);
+}
+
+/* Teal Gift */
+.corner-gift-r.teal .corner-gift-box-r {
+    background: linear-gradient(135deg, #00ACC1, #00838F);
+}
+
+.corner-gift-r.teal .corner-gift-lid-r {
+    background: linear-gradient(135deg, #26C6DA, #0097A7);
+}
+
+/* Yellow Gift */
+.corner-gift-r.yellow .corner-gift-box-r {
+    background: linear-gradient(135deg, #FDD835, #F9A825);
+}
+
+.corner-gift-r.yellow .corner-gift-lid-r {
+    background: linear-gradient(135deg, #FFEB3B, #FBC02D);
+}
+
+/* Silver Gift */
+.corner-gift-r.silver .corner-gift-box-r {
+    background: linear-gradient(135deg, #BDBDBD, #757575);
+}
+
+.corner-gift-r.silver .corner-gift-lid-r {
+    background: linear-gradient(135deg, #E0E0E0, #9E9E9E);
+}
+
+/* Lime Gift */
+.corner-gift-r.lime .corner-gift-box-r {
+    background: linear-gradient(135deg, #CDDC39, #9E9D24);
+}
+
+.corner-gift-r.lime .corner-gift-lid-r {
+    background: linear-gradient(135deg, #D4E157, #AFB42B);
+}
+
+/* Hide right corner gifts on mobile */
+@media (max-width: 768px) {
+    .corner-gifts-right {
+        display: none;
+    }
+}
+
+/* ==================== Generative Wreaths ==================== */
+.css-wreath {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 350px;
+    z-index: 5;
+    pointer-events: none;
+    /* Swaying Animation */
+    animation: wreathSway 6s ease-in-out infinite alternate, wreathRedGlow 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.2));
+}
+
+@keyframes wreathRedGlow {
+
+    0%,
+    100% {
+        filter:
+            drop-shadow(0 0 8px rgba(220, 38, 38, 0.2)) drop-shadow(0 0 15px rgba(185, 28, 28, 0.15));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 12px rgba(220, 38, 38, 0.3)) drop-shadow(0 0 25px rgba(185, 28, 28, 0.25));
+    }
+}
+
+@keyframes wreathSway {
+    0% {
+        transform: translateY(-50%) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(3deg);
+    }
+}
+
+.css-wreath.left {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.css-wreath.right {
+    right: 8%;
+    animation-delay: 1s;
+    /* Offset for natural feel */
+}
+
+/* ... existing leaf/berry/ornament styles ... */
+
+/* Improved Wreath Bow (Larger & Nicer) */
+.wreath-bow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    z-index: 30;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.wreath-bow::before {
+    /* Left Loop */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 0 50%;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #990000);
+    transform: rotate(-15deg);
+    border: 1px solid #7a0000;
+}
+
+.wreath-bow::after {
+    /* Right Loop */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: radial-gradient(circle at 70% 30%, #ff4d4d, #990000);
+    transform: rotate(15deg);
+    border: 1px solid #7a0000;
+}
+
+/* Center Knot of Bow */
+.wreath-bow .knot {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #b30000;
+    border-radius: 50%;
+    z-index: 31;
+}
+
+/* Ribbons hanging down */
+.wreath-bow .ribbon-left,
+.wreath-bow .ribbon-right {
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 40px;
+    background: linear-gradient(to bottom, #d41c1c, #990000);
+    z-index: 29;
+}
+
+.wreath-bow .ribbon-left {
+    left: 10px;
+    transform: rotate(10deg);
+}
+
+.wreath-bow .ribbon-right {
+    right: 10px;
+    transform: rotate(-10deg);
+}
+
+
+.wreath-leaf {
+    position: absolute;
+    width: 6px;
+    /* Thinner for pine needle look */
+    height: 35px;
+    /* Longer */
+    border-radius: 40% 40% 40% 40%;
+    transform-origin: center bottom;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.wreath-berry {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle at 30% 30%, #ff1a1a, #990000);
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.wreath-ornament {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 22;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.wreath-ornament::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    filter: blur(0.5px);
+}
+
+.wreath-light {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    z-index: 25;
+    animation: wreathTwinkle 1.5s infinite alternate;
+    box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+    filter: brightness(1.5);
+}
+
+@keyframes wreathTwinkle {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.8);
+        box-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+        box-shadow: 0 0 25px currentColor, 0 0 50px currentColor, 0 0 75px currentColor;
+    }
+}
+
+/* Poinsettia Flowers */
+.wreath-flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 26;
+    transform: translate(-50%, -50%);
+}
+
+.flower-petal {
+    position: absolute;
+    width: 18px;
+    height: 25px;
+    background: radial-gradient(ellipse at 50% 30%, #ff3333, #cc0000);
+    border-radius: 50% 50% 40% 40%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center 60%;
+    margin-left: -9px;
+    margin-top: -12.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.flower-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at 40% 40%, #ffeb3b, #fbc02d);
+    border-radius: 50%;
+    z-index: 27;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Wreath Bow */
+.wreath-bow {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    z-index: 30;
+}
+
+.wreath-bow::before,
+.wreath-bow::after {
+    content: '';
+    position: absolute;
+    background: #d41c1c;
+    border: 1px solid #990000;
+}
+
+/* Bow loops */
+.wreath-bow::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #ff4d4d, #d41c1c);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Bow ribbons */
+.wreath-bow::after {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-left: 10px solid #d41c1c;
+    border-right: 10px solid #d41c1c;
+    border-bottom: 10px solid transparent;
+    /* Forked ends */
+}
+
+/* Hide on mobile */
+@media (max-width: 1000px) {
+    .css-wreath {
+        width: 200px;
+        height: 200px;
+        top: 25%;
+    }
+
+    .wreath-leaf {
+        width: 14px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .css-wreath {
+        display: none;
+    }
+}

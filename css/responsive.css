@@ -1,0 +1,253 @@
+/* ==================== Mobile Optimizations ==================== */
+
+/* Small phones and portrait mode */
+@media (max-width: 480px) {
+
+    /* Card adjustments */
+    .card {
+        padding: 30px 15px;
+        font-size: 0.9rem;
+    }
+
+    .card::after {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        top: 10px;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+        margin-top: 35px;
+    }
+
+    .subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .header-ribbon {
+        font-size: 1.8rem;
+        margin-top: 5px;
+    }
+
+    .greeting {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .main-message {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .signature {
+        font-size: 1.8rem;
+        margin-top: 25px;
+    }
+
+    /* Decorations - smaller on mobile */
+    .decoration {
+        font-size: 1.2rem;
+        opacity: 0.3;
+    }
+
+    .decoration-mid-left,
+    .decoration-mid-right {
+        font-size: 1.5rem;
+    }
+
+    /* Gift box */
+    .gift-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .gift-lid {
+        width: 200px;
+        height: 45px;
+        top: -35px;
+    }
+
+    .gift-box-container {
+        margin-top: 60px;
+    }
+
+    /* Carpet - narrower on mobile */
+    .snow-mound {
+        width: 600px !important;
+        height: 200% !important;
+    }
+
+    /* Hide candy canes on very small screens */
+    .candy-cane {
+        display: none;
+    }
+}
+
+/* Phones and small tablets */
+@media (max-width: 600px) {
+    .card {
+        padding: 35px 20px;
+        max-width: 95%;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+
+    .subtitle {
+        font-size: 0.7rem;
+        margin-bottom: 30px;
+    }
+
+    .header-ribbon {
+        font-size: 2rem;
+    }
+
+    .main-message {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .gift-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gift-lid {
+        width: 220px;
+        height: 48px;
+        top: -38px;
+    }
+
+    .gift-box-container {
+        margin-top: 70px;
+    }
+
+    /* Carpet adjustments */
+    .snow-mound {
+        width: 700px !important;
+        height: 220% !important;
+    }
+
+    /* Hide wreaths on mobile */
+    .css-wreath {
+        display: none;
+    }
+
+    /* Smaller ornaments */
+    .ornament {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablets and medium screens */
+@media (max-width: 768px) {
+    .card {
+        padding: 40px 25px;
+        max-width: 90%;
+    }
+
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .card::after {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+
+    /* Hide corner gifts */
+    .corner-gifts,
+    .corner-gifts-right {
+        display: none;
+    }
+
+    /* Adjust stockings */
+    .stockings-container {
+        display: none;
+    }
+
+    .gift-box-container {
+        margin-top: 50px;
+    }
+
+    /* Carpet */
+    .snow-mound {
+        width: 800px !important;
+        height: 230% !important;
+    }
+}
+
+/* Tablets landscape and smaller desktops */
+@media (max-width: 1000px) {
+    .css-wreath {
+        width: 200px;
+        height: 200px;
+        top: 25%;
+    }
+
+    .wreath-leaf {
+        width: 14px;
+        height: 28px;
+    }
+
+    .snow-mound {
+        width: 850px !important;
+        height: 240% !important;
+    }
+}
+
+/* Landscape phone orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .card {
+        max-height: 85vh;
+        padding: 20px 15px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        margin-top: 25px;
+    }
+
+    .subtitle {
+        margin-bottom: 15px;
+    }
+
+    .card::after {
+        top: 5px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+
+    .greeting {
+        margin-bottom: 15px;
+    }
+
+    .main-message {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .main-message p {
+        margin-bottom: 12px;
+    }
+
+    .signature {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .header-ribbon {
+        font-size: 1.5rem;
+    }
+
+    .decoration {
+        font-size: 1rem;
+    }
+}

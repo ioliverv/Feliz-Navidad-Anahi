@@ -1,0 +1,180 @@
+/* ==================== Christmas Stockings ==================== */
+.stockings-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 18;
+    pointer-events: none;
+}
+
+.stocking {
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    animation: stockingSwing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+/* Stocking body (main part) */
+.stocking::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    top: 25px;
+    left: 5px;
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+    border-radius: 0 0 12px 12px;
+    box-shadow:
+        inset -2px -2px 6px rgba(0, 0, 0, 0.3),
+        2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Stocking foot (horizontal part at bottom) */
+.stocking::after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 30px;
+    bottom: 0;
+    left: 22px;
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+    border-radius: 0 12px 12px 0;
+    box-shadow:
+        inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+        2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* White cuff at top */
+.stocking::before {
+    border-top: 15px solid #ffffff;
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.1),
+        0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hanging rope/string */
+.stocking {
+    border-top: 2px solid #8b4513;
+}
+
+/* Position 9 stockings evenly distributed */
+.stocking-1 {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.stocking-1::before,
+.stocking-1::after {
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+}
+
+.stocking-2 {
+    left: 13%;
+    animation-delay: 0.3s;
+}
+
+.stocking-2::before,
+.stocking-2::after {
+    background: linear-gradient(135deg, #228b22 0%, #006400 100%);
+}
+
+.stocking-3 {
+    left: 24%;
+    animation-delay: 0.6s;
+}
+
+.stocking-3::before,
+.stocking-3::after {
+    background: linear-gradient(135deg, #9370db 0%, #663399 100%);
+}
+
+.stocking-4 {
+    left: 35%;
+    animation-delay: 0.9s;
+}
+
+.stocking-4::before,
+.stocking-4::after {
+    background: linear-gradient(135deg, #ffd700 0%, #daa520 100%);
+}
+
+.stocking-5 {
+    left: 48%;
+    animation-delay: 1.2s;
+}
+
+.stocking-5::before,
+.stocking-5::after {
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+}
+
+.stocking-6 {
+    left: 61%;
+    animation-delay: 1.5s;
+}
+
+.stocking-6::before,
+.stocking-6::after {
+    background: linear-gradient(135deg, #4169e1 0%, #1e3a8a 100%);
+}
+
+.stocking-7 {
+    left: 71%;
+    animation-delay: 1.8s;
+}
+
+.stocking-7::before,
+.stocking-7::after {
+    background: linear-gradient(135deg, #228b22 0%, #006400 100%);
+}
+
+.stocking-8 {
+    left: 82%;
+    animation-delay: 2.1s;
+}
+
+.stocking-8::before,
+.stocking-8::after {
+    background: linear-gradient(135deg, #9370db 0%, #663399 100%);
+}
+
+.stocking-9 {
+    left: 92%;
+    animation-delay: 2.4s;
+}
+
+.stocking-9::before,
+.stocking-9::after {
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+}
+
+/* Swinging animation */
+@keyframes stockingSwing {
+
+    0%,
+    100% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .stockings-container {
+        display: none;
+    }
+}
+
+/* Hide middle stockings when card is visible */
+.card-container.visible~.stockings-container .stocking-4,
+.card-container.visible~.stockings-container .stocking-5,
+.card-container.visible~.stockings-container .stocking-6 {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
